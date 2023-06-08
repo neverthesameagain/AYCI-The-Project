@@ -6,3 +6,8 @@ time
 datetime
 os
 sys
+face_recognition
+AF_INET
+socket
+SOCK_STREAM
+Thread
