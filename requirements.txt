@@ -1,0 +1,5 @@
+cmake==3.26.3
+opencv-python==4.7.0.72
+dlib-19.24.1.tar.gz
+customtkinter==5.1.3
+face-recognition==1.3.0
