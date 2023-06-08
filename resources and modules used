@@ -11,3 +11,7 @@ AF_INET
 socket
 SOCK_STREAM
 Thread
+tkinter
+customtkinter
+re
+random
