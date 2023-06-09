@@ -1,4 +1,4 @@
-"""Script for Tkinter GUI chat client."""
+
 import tkinter
 import tkinter.messagebox
 import customtkinter
@@ -9,15 +9,15 @@ from threading import Thread
 
 
 
-customtkinter.set_appearance_mode("System")  # Modes: "System" (standard), "Dark", "Light"
-customtkinter.set_default_color_theme("green")  # Themes: "blue" (standard), "green", "dark-blue"
+customtkinter.set_appearance_mode("System")  
+customtkinter.set_default_color_theme("green")  
 
 class App(customtkinter.CTk):
     
 
    
     def __init__(self):
-        def send():  # event is passed by binders.
+        def send(): 
             """Handles sending of messages."""
             msg = self.entry.get()
             client_socket.send(bytes(msg, "utf8"))
@@ -27,7 +27,7 @@ class App(customtkinter.CTk):
         super().__init__()
         self.title("Your Chat Room!")
         self.geometry(f"{1100}x{580}")
-    # configure grid layout (4x4)
+
         self.grid_columnconfigure(1, weight=1)
         self.grid_columnconfigure((2, 3), weight=0)
         self.grid_rowconfigure((0, 1, 2), weight=1)
@@ -62,7 +62,7 @@ class App(customtkinter.CTk):
 
         
 
-        # create tabview
+     
       
         self.radiobutton_frame = customtkinter.CTkFrame(self)
         self.radiobutton_frame.grid(row=0, column=1, padx=(20, 20), pady=(20, 0), sticky="nsew")
@@ -72,7 +72,7 @@ class App(customtkinter.CTk):
         self.radio_button_1 = customtkinter.CTkRadioButton(master=self.radiobutton_frame,text="Text to Text", variable=self.radio_var, value=0)
         self.radio_button_1.grid(row=1, column=2, pady=10, padx=20, sticky="n")
        
-        # creating Conversation
+ 
         
         
         
@@ -91,7 +91,7 @@ class App(customtkinter.CTk):
                     switch = customtkinter.CTkLabel(master=self.scrollable_frame, text=msg)
                     switch.grid( column=0, padx=10)
                     self.scrollable_frame_switches.append(msg)                    
-                except OSError:  # Possibly client has left the chat.
+                except OSError:
                         break
         
        
@@ -101,7 +101,7 @@ class App(customtkinter.CTk):
             print("sidebar_button click")
             
         
-# Following will contain the messages.
+
         self.scrollable_frame = customtkinter.CTkScrollableFrame(self,width=250, label_text="The conversation")
         self.scrollable_frame.grid(row=1, column=1,columnspan=3, padx=(20, 0), pady=(20, 0), sticky="nsew")
         self.scrollable_frame.grid_columnconfigure(0, weight=1)
@@ -109,7 +109,6 @@ class App(customtkinter.CTk):
         
 
 
-#----Now comes the sockets part----
         HOST = '127.0.0.1'
         PORT = 3000
         BUFSIZ = 1024
