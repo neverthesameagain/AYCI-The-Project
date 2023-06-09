@@ -73,7 +73,7 @@ def display_process_info(frame):
         print("Taking you to the AYCI app.....")
         vid.release()
         cv.destroyAllWindows()
-        subprocess.call(["python", "the initial home page.py"])
+        os.system('cmd /c "python chatbot.py"')
         sys.exit(0)
 
     else:
