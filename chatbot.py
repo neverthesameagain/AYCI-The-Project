@@ -536,7 +536,7 @@ class App(customtkinter.CTk):
         new_scaling_float = int(new_scaling.replace("%", "")) / 100
         customtkinter.set_widget_scaling(new_scaling_float)
     def sidebar_button_event(self):
-        subprocess.call(["python", "group.py"])
+        subprocess.call(["python", "the groupchat user side.py"])
     def change_background_color(self, new_color):
         self.configure(bg=new_color)
 
