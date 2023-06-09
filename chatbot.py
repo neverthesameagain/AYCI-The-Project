@@ -271,7 +271,8 @@ class App(customtkinter.CTk):
                 tts = gTTS(text="       You seem Neutral, I basically see some mixed emotions which I can't process for now", lang=language)
                 audio_file = "output.mp3"
                 tts.save(audio_file)
-                playsound(audio_file) 
+                playsound(audio_file)
+                os.remove("output.mp3")
             def reactnegative():
                 language = "en"
                 switch = customtkinter.CTkLabel(master=self.scrollable_frame, text=f">       You seem to be in anguish, something happened?")
@@ -280,6 +281,7 @@ class App(customtkinter.CTk):
                 audio_file = "output.mp3"
                 tts.save(audio_file)
                 playsound(audio_file) 
+                os.remove("output.mp3")
                 print("-") 
             def reactpositive():
                 switch = customtkinter.CTkLabel(master=self.scrollable_frame, text=f"Great that you are happy!")
@@ -289,6 +291,7 @@ class App(customtkinter.CTk):
                 audio_file = "output.mp3"
                 tts.save(audio_file)
                 playsound(audio_file)
+                os.remove("output.mp3")
                 print("+")
             
             #def reactpositive(self):
@@ -330,7 +333,8 @@ class App(customtkinter.CTk):
                     tts = gTTS(text=text, lang=language)
                     audio_file = "output.mp3"
                     tts.save(audio_file)
-                    playsound(audio_file)   
+                    playsound(audio_file)
+                    os.remove("output.mp3")
                     #say(outr)
                     self.scrollable_frame_switches.append(f" {outr}")
  
@@ -347,7 +351,8 @@ class App(customtkinter.CTk):
                     tts = gTTS(text=text, lang=language)
                     audio_file = "output.mp3"
                     tts.save(audio_file)
-                    playsound(audio_file) 
+                    playsound(audio_file)
+                    os.remove("output.mp3")
                     #say(f"Opening {site[0]}")
             intros=['who are you', 'what is your name', 'tell me about yourself', 'what should I call you', 'who is behind you', 'what do they call you', 'what are you called', 'how can I address you', 'may I know your name', 'what should I know about you', 'whats your name', 'what do you go by', 'who am I speaking to', 'what is your identity', 'what are you known as', 'tell me your name', 'what are you called by', 'what name do you respond to', 'who is this', 'what is your moniker', 'how do you identify yourself', 'what label do you carry', 'what is your appellation', 'what do people call you', 'who goes there', 'what are you referred to as', 'what is your given name', 'tell me your designation', 'what is your title', 'what do you prefer to be called', 'who do you represent', 'what is your nickname', 'what do you call yourself', 'who is on the other side', 'what is your tag', 'what name do you possess', 'how do you introduce yourself', 'what is your cognomen', 'what do you answer to', 'who is chatting with me', 'what is your handle', 'what is your self-identification', 'how do you label yourself', 'what is your identity marker', 'what are you known by', 'who is this Im talking to', 'what do you identify as', 'what are you called upon', 'what do you refer to yourself as', 'who is interacting with me', 'what is your appellative','who am i talking to','who am i chatting with','what are you','what you are']        
             for intro in intros:
@@ -362,6 +367,7 @@ class App(customtkinter.CTk):
                     audio_file = "output.mp3"
                     tts.save(audio_file)
                     playsound(audio_file)
+                    os.remove("output.mp3")
                     #say(outr)
             howdy=['how are you', 'how\'s it going?', 'how\'s everything?', 'how are you doing?', 'how do you feel?', 'how\'s your day?', 'how are things?', 'how have you been?', 'how\'s life?', 'how\'s your day going?', 'how are you today?', 'how\'s your mood?', 'how goes it?', 'how are you holding up?', 'how are you coping?', 'how\'s your health?', 'how\'s your well-being?', 'how are you feeling today?', 'how is everything with you?', 'how\'s your state?', 'how are you managing?', 'how are you faring?', 'how are you dealing with things?', 'how are you handling it?', 'how\'s your situation?', 'how are you keeping?', 'how are you managing?', 'how are you bearing up?', 'how are you taking it?', 'how\'s your spirit?', 'how are you hanging in there?', 'how\'s your energy?', 'how\'s your emotional state?', 'how\'s your mindset?', 'how are you navigating?', 'how are you facing it?', 'how\'s your attitude?', 'how are you weathering it?', 'how\'s your morale?', 'how are you handling the circumstances?', 'how\'s your composure?', 'how are you enduring it?', 'how\'s your disposition?', 'how\'s your outlook?', 'how are you tackling it?', 'how\'s your frame of mind?', 'how are you managing the challenges?', 'how\'s your response?', 'how are you carrying on?']        
             for howdys in howdy:
@@ -375,7 +381,8 @@ class App(customtkinter.CTk):
                     tts = gTTS(text=text, lang=language)
                     audio_file = "output.mp3"
                     tts.save(audio_file)
-                    playsound(audio_file)    
+                    playsound(audio_file)
+                    os.remove("output.mp3")
                     #say(outro)
             if "yes" in texto:
                 switch = customtkinter.CTkLabel(master=self.scrollable_frame, text=f"->>             Keep saying, i'm still trying to predict what you are going to write next")
@@ -385,7 +392,8 @@ class App(customtkinter.CTk):
                 tts = gTTS(text="->>             Keep saying, i'm still trying to figure out what you said..", lang=language)
                 audio_file = "output.mp3"
                 tts.save(audio_file)
-                playsound(audio_file)    
+                playsound(audio_file)
+                os.remove("output.mp3")
                     #say(outro)
 
             quit=["goodbye", "farewell", "later", "bye", "see ya", "take care", "adios", "ciao", "cheerio", "so long", "hasta luego", "see you soon", "bye-bye", "till next time", "peace out", "au revoir", "adieu", "catch you later", "ttyl", "gotta go"]
@@ -399,7 +407,8 @@ class App(customtkinter.CTk):
                     tts = gTTS(text=outo, lang=language)
                     audio_file = "output.mp3"
                     tts.save(audio_file)
-                    playsound(audio_file)    
+                    playsound(audio_file)
+                    os.remove("output.mp3")
                     #say(outro)
             dest=["destroy", "annihilate", "demolish", "ruin", "wreck", "obliterate",  "shatter", "devastate", "eradicate", "overwhelm", "sabotage", "corrode", "undermine", "dismantle", "disable", "implode", "decimate", "subvert", "extinguish","kill","murder","end life","end him","end her"]
             for dests in dest:
@@ -415,6 +424,7 @@ class App(customtkinter.CTk):
                     audio_file = "output.mp3"
                     tts.save(audio_file)
                     playsound(audio_file)
+                    os.remove("output.mp3")
                     
             for proposals in proposal:
                 if proposals in querry:
@@ -428,6 +438,7 @@ class App(customtkinter.CTk):
                     audio_file = "output.mp3"
                     tts.save(audio_file)
                     playsound(audio_file)
+                    os.remove("output.mp3")
 
             for i in range(len(quit)):
                 if quit[i] not in texto:
@@ -444,6 +455,7 @@ class App(customtkinter.CTk):
                                                 audio_file = "output.mp3"
                                                 tts.save(audio_file)
                                                 playsound(audio_file)
+                                                os.remove("output.mp3")
                                                 file = open("notknow.txt","w")
 
                                                 file.write(texto)
