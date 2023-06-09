@@ -20,7 +20,7 @@ dependencies = [
     'opencv-python==4.7.0.72',
     'customtkinter==5.1.3',
     'face-recognition==1.3.0',
-    'playsound==1.3.0',
+    'playsound==1.2.2',
     'gtts'
 ]
 
